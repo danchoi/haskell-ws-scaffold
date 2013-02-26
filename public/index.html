@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>test</title>
+    <script>
+      
+      function test() {
+        var ws = new WebSocket('ws://127.0.0.1:9161/ws');
+        ws.onopen = function(e) {
+          console.log('test');
+          ws.send("Hi! I am test");
+        };
+        ws.onmessage = function(e) {
+          console.log(e.data);
+        };
+      }
+
+    </script>
+  </head>
+  <body>
+
+    <h1>test</h1>
+  </body>
+</html>
+
+
